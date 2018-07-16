@@ -20,10 +20,13 @@ protected:
 
 private slots:
     void copyToClip();
+    void error(QString msg);
+    void tagFound(const QString &tag, const QString &format, const QString &charSet);
 
 private:
     QClipboard*     m_clipBoard;
     QLabel*         m_label;
+    QLabel*         m_label2;
     QLineEdit*      m_edit;
     QPushButton*    m_button;
     QZXing*         m_zxing;
